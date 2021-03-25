@@ -4,8 +4,6 @@ const p = new Promise((resolve) => {
 
 p.then(console.log)
 
-var a = 1
-
-
+const a = 1
 
 console.log(a)
