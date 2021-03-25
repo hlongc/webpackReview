@@ -6,12 +6,13 @@
   "scripts": {
     "build": "webpack",
     "dev": "webpack serve",
-    "lint": "eslint --ext .js --ext .jsx client/"
+    "lint": "eslint src --fix --ext .js,.jsx",
+    "prepare": "husky install"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "echo 'husky' && npm run lint"
-    }
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "npm run lint"
+    ]
   },
   "keywords": [],
   "author": "",
@@ -51,6 +52,7 @@
     "jsencrypt": "^3.1.0",
     "less": "^4.1.1",
     "less-loader": "^8.0.0",
+    "lint-staged": "^10.5.4",
     "raw-loader": "^4.0.2",
     "style-loader": "^2.0.0",
     "url-loader": "^4.1.1",

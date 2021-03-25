@@ -4,5 +4,11 @@ const p = new Promise((resolve) => {
 
 p.then(console.log)
 
-const a = 1
-console.log(b)
+var a = 1
+
+
+
+console.log(a)
+
+
+
